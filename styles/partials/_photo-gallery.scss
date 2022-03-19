@@ -1,0 +1,61 @@
+@use '../partials/variables';
+@use '../partials/mixins' as *;
+
+.photo-gallery {
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+
+    &__title{
+        font-family: variables.$font-bold;
+    }
+
+    &__group{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        &--image {
+            background-position: center;
+            background-size: cover;
+            height: 10rem;
+            width: auto;
+        }
+    }
+
+    
+
+    @include tablet{
+        &__title{
+            padding-left: 0.9rem;
+            font-size: 2.5rem;
+            padding-top: 1rem;
+        }
+        &__group{
+            display: flex;
+            flex-direction: row;
+            padding-left: 0.9rem;
+
+
+            &--image{
+                height: 8rem;
+            }
+        }
+    }
+
+    @include desktop{
+        &__title{
+            padding-left: 14.375rem;
+            font-size: 2rem;
+        }
+        
+        &__group{
+            justify-content: center;
+            &--image{
+                height: 9rem;
+            }
+        }
+    }
+}

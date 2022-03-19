@@ -1,0 +1,17 @@
+@use '../styles/partials/primary-header';
+@use './partials/hero-image';
+@use './partials/fonts';
+@use './partials/primary-body';
+@use './partials/photo-gallery';
+@use './partials/primary-footer';
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'AvenirNext LT Pro';
+}
+

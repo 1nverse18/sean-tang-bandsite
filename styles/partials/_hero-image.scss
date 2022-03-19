@@ -1,0 +1,37 @@
+@use '../partials/variables';
+@use '../partials/mixins' as *;
+
+.hero-image {
+    position: relative;
+    display: flex;
+    background-image: url(../../assets/images/hero-bio.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 12.5rem;
+    font-size: 2rem;
+        
+    &__title {
+        padding-left: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    &__opacity{
+        height: inherit;
+        width: 100%;
+        opacity: 50%;
+        background-color: #323232;
+        position: absolute;
+    }
+    
+    @include tablet{
+        height: 25rem;
+    }
+
+    @include desktop{
+        height: 35rem;
+    }
+}

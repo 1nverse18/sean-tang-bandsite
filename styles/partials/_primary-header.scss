@@ -1,0 +1,87 @@
+@use '../partials/variables';
+@use '../partials/mixins' as *;
+
+.primary-header {
+    background-color: variables.$black-background;
+    color: white;
+    font-family: variables.$font-regular;
+
+    &__title {
+        padding-top: 15px;
+        height: 20px;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        padding-bottom: 1rem;
+    }
+
+    &__list {
+        display: flex;
+        justify-content:space-around;
+        list-style: none;
+        font-size: 1rem;
+        line-height: 1.375rem;
+        font-weight: bold 700;
+    } 
+    &__item {
+        text-decoration: none;
+        color: variables.$silver-color;
+        display:flex;
+        width: 50%;
+        justify-content: center;
+
+            &--active {
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                color: variables.$white-color;
+                border-bottom: 3px solid variables.$white-color;
+                width: 100%;
+                padding-bottom: 10px;
+                color: variables.$white-color;
+            }
+    }
+    @include tablet{
+       
+        &__title{
+            margin-left: 2rem;
+            margin-right: 3.125rem;
+        }
+        &__nav{
+            display:flex;
+            align-items: center;
+            
+        }
+        &__item{
+            padding-right: 3.75rem;
+            padding-top: 1.25rem;
+            &--active{
+                padding-bottom: 1.2rem;
+            }
+        }
+    }
+
+    @include desktop{
+        &__title{
+            margin-left: 5rem;
+            margin-right: 3.125rem;
+            height: 15px;
+        }
+        &__nav{
+            display:flex;
+            align-items: center;  
+        }
+
+        &__list{
+            font-size: 0.8rem;
+        }
+        &__item{
+            padding-right: 3.75rem;
+            padding-top: 1.25rem;
+            &--active{
+                padding-bottom: 1.2rem;
+            }
+        }
+    }
+}
+

@@ -42,15 +42,15 @@
             }
     }
     @include tablet{
-       
+
         &__title{
-            margin-left: 2rem;
             margin-right: 3.125rem;
         }
         &__nav{
             display:flex;
             align-items: center;
-            
+            width: 60%;
+            justify-content: center;
         }
         &__item{
             padding-right: 3.75rem;
@@ -69,7 +69,8 @@
         }
         &__nav{
             display:flex;
-            align-items: center;  
+            align-items: center;
+            max-width: 1280px;
         }
 
         &__list{

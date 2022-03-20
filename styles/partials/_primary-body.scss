@@ -9,26 +9,38 @@
         padding-bottom: 0.625rem;
         font-family: variables.$font-bold;
         font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
     }
     &__band-image{
-        background-position: center;
-        background-size: cover;
+        object-position: center;
+        object-fit: cover;
         height: 12rem;
         width: auto;
         padding-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        margin: auto;
     }
     &__quote{
         font-family: variables.$font-bold;
         padding-bottom: 1rem;
+        
 
         &--description{
             font-family: variables.$font-bold;
             padding-bottom: 1.2rem;
+            display: flex;
+            justify-content: center;
+            
         }
     }
     &__header{
         font-family: variables.$font-bold;
         padding-bottom: 1rem;
+        justify-content: center;
+        display: flex;
+        
     }
     &__main{
         padding-bottom: 0.5rem;
@@ -42,6 +54,7 @@
         &__title{
             font-size: 2rem;
             margin: 3rem 0 1rem 1rem;
+            padding-right: 400px;
         }
 
         &__band-image{
@@ -61,6 +74,7 @@
 
             &--description{
                 padding-left: 5.2rem;
+                padding-right: 330px;
             }
         }
 
@@ -69,6 +83,7 @@
             line-height: 32px;
             padding-left: 5rem;
             padding-top: 1rem;
+            padding-right: 515px;
         }
 
         &__main{
@@ -88,6 +103,7 @@
         &__title{
             font-size: 2rem;
             margin: 3rem 0 1rem 9rem;
+            padding-right: 50rem;
         }
 
         &__band-image{
@@ -102,19 +118,20 @@
             width: 36rem;
             font-size: 1.2rem;
             display: flex;
-            justify-content: flex-start;
-            margin-left: 225px;
+            justify-content: center;
+            margin: auto;
             padding-top: 1rem;
+            padding-right: 13.75rem;
 
             &--description{
-                padding-left: 14.2rem;
+                padding-right: 33rem;
             }
         }
 
         &__header{
             font-size: 1.3rem;
             line-height: 32px;
-            padding-left: 14rem;
+            padding-right: 46rem;
             padding-top: 1rem;
         }
 

@@ -1,5 +1,11 @@
 @use 'variables' as *;
 
+@mixin mobileIntoTablet {
+  @media screen and (max-width: 767px) and (min-width: 400px) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media screen and (min-width: 768px) {
       @content;            

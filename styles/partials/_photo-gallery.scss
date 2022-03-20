@@ -18,26 +18,28 @@
         gap: 1rem;
 
         &--image {
-            background-position: center;
-            background-size: cover;
+            object-position: center;
+            object-fit: cover;
             height: 10rem;
             width: auto;
         }
     }
 
-    
 
     @include tablet{
         &__title{
             padding-left: 0.9rem;
             font-size: 2.5rem;
             padding-top: 1rem;
+            justify-content: center;
+            display: flex;
+            padding-right: 490px;
         }
         &__group{
             display: flex;
             flex-direction: row;
             padding-left: 0.9rem;
-
+            justify-content: center;
 
             &--image{
                 height: 8rem;
@@ -47,7 +49,7 @@
 
     @include desktop{
         &__title{
-            padding-left: 14.375rem;
+            padding-right: 37.5rem;
             font-size: 2rem;
         }
         
@@ -55,6 +57,15 @@
             justify-content: center;
             &--image{
                 height: 9rem;
+            }
+        }
+    }
+
+    @include mobileIntoTablet {
+        &__group{
+            &--image{
+                height: auto;
+                width: auto;
             }
         }
     }

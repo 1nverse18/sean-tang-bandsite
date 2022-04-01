@@ -36,6 +36,10 @@
   padding-bottom: 10px;
   color: white;
 }
+.primary-header__item--inactive {
+  text-decoration: none;
+  color: white;
+}
 @media screen and (min-width: 768px) {
   .primary-header__title {
     margin-right: 3.125rem;

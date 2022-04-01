@@ -1,0 +1,14 @@
+@use '../styles/partials/primary-header';
+@use './partials/primary-footer';
+@use './partials/fonts';
+@use './partials/shows-hero';
+@use './partials/show-section';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'AvenirNext LT Pro';
+}

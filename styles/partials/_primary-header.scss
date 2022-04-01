@@ -40,6 +40,11 @@
                 padding-bottom: 10px;
                 color: variables.$white-color;
             }
+
+            &--inactive {
+                text-decoration: none;
+                color: variables.$white-color;
+            }
     }
     @include tablet{
 

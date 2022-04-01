@@ -1,0 +1,75 @@
+@use '../partials/variables';
+@use '../partials/mixins' as *;
+
+.hero-image {
+    position: relative;
+    display: flex;
+    background-image: url(../../assets/images/hero-shows.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 18rem;
+    font-size: 1rem;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 80%;
+        gap: 20px;
+        padding-top: 3rem;
+    }
+        
+    &__title {
+        padding-left: 1rem;
+        color: white;
+        z-index: 1; 
+        width: 13rem;
+
+        &--large{
+            padding-left: 1rem;
+            color: white;
+            z-index: 1;
+            width: 13rem;
+        }
+    }
+
+    &__opacity{
+        height: inherit;
+        width: 100%;
+        opacity: 50%;
+        background-color: #323232;
+        position: absolute;
+    }
+
+    &__player-container {
+        z-index: 1;
+        padding-left: 1rem;
+    }
+
+    &__player{
+        height: 6rem;
+        width: 18rem;
+    }
+
+    @include tablet {
+        display: flex;
+        height: 30rem;
+        
+        &__title {
+            font-size: 1.8rem;
+            width: 20rem;
+            padding-left: 2rem;
+
+            &--large {
+                font-size: 4rem;
+                width: 35rem;
+                padding-left: 2rem;
+            }
+        }
+        &__player{
+            width: 27rem;
+            height: 8rem;
+            padding-left: 1rem;
+        }
+    }
+}

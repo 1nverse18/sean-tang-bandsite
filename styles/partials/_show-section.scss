@@ -1,0 +1,138 @@
+@use '../partials/variables';
+@use '../partials/mixins' as *;
+
+.show-section{
+    &__tablet-title{
+        display: none;
+    }
+    &__tablet-subtitles{
+        display: none;
+    }
+    &__container{
+        padding: 2rem 1rem 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        border-bottom: solid 1px #AFAFAF;
+
+        &--final{
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__date{
+        font-weight: bold;
+    }
+
+    &__text {
+        font-size: 1rem;
+    }
+    &__title{
+        font-family: 'AvenirNext LT Pro Demi';
+        font-size: 1.5rem;
+        padding-bottom: 1.8rem;
+    }
+    &__sub-header {
+        color: #AFAFAF;
+        font-family: 'AvenirNext LT Pro Demi';
+    }
+    &__button {
+        background-color: #323232;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        height: 2.5rem;
+        border-radius: 5px;
+        margin-top: 0.5rem;
+    }
+    @include tablet {
+        &__container {
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        &__date{
+            &--one{
+                padding-right: 3.8rem;
+            }
+            &--two{
+                padding-right: 3.7rem;
+            }
+            &--three{
+                padding-right: 4.8rem;
+            }
+            &--four{
+                padding-right: 4.2rem;
+            }
+            &--five{
+                padding-right: 4.4rem;
+            }
+            &--six{
+                padding-right: 3.4rem;
+            }
+        }
+
+        &__location{
+            &--one{
+                padding-left: 4rem;
+                padding-right: 3rem;
+            }
+            &--two{
+                padding-left: 5.1rem;
+                padding-right: 3rem;
+            }
+            &--three{
+                padding-left: 4.1rem;
+                padding-right: 3rem;
+            }
+            &--four{
+                padding-left: 4rem;
+                padding-right: 3rem;
+            }
+            &--five{
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+            &--six{
+                padding-left: 5.3rem;
+                padding-right: 3rem;
+            }
+        }
+
+        &__tablet-title{
+            font-family: 'AvenirNext LT Pro Demi';
+            font-size: 2rem;
+            padding-bottom: 1.8rem;
+            padding-top: 3rem;
+            padding-left: 2rem;
+            display: flex;
+        }
+        &__tablet-subtitles{
+            display: flex;
+            color: #AFAFAF;
+            font-family: 'AvenirNext LT Pro Demi';
+            padding-left: 2rem;
+        }
+        &__tablet-subtitle{
+            padding-right: 165px;
+
+            &--venue{
+                padding-right: 110px;
+            }
+        }
+        &__sub-header{
+            display: none;
+        }
+    
+        &__title{
+            display: none;
+        }
+        &__button{
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+        }
+    }
+}

@@ -445,6 +445,39 @@ h3 {
   }
 }
 
+.comment-section__list {
+  display: flex;
+  font-size: 0.9rem;
+  border-bottom: solid 1px #AFAFAF;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+.comment-section #list {
+  margin-left: 1rem;
+  width: 300px;
+  margin-right: 1rem;
+}
+.comment-section__photo {
+  height: 36px;
+  width: 36px;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+}
+.comment-section__content {
+  padding-left: 1rem;
+}
+.comment-section__name-date {
+  display: flex;
+  justify-content: space-between;
+}
+.comment-section__name {
+  font-family: "AvenirNext LT Pro Demi";
+  padding-bottom: 0.3rem;
+}
+.comment-section__date {
+  color: #AFAFAF;
+}
+
 * {
   margin: 0;
   padding: 0;

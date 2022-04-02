@@ -242,9 +242,7 @@ const render = () => {
     showsSectionButtonSix.innerHTML = 'BUY TICKETS';
 
     document.getElementById("showsSection").appendChild(showSectionHeaderSubheader);
-    // document.getElementById("showsSection").appendChild(showsTitleDiv);
     document.getElementById("showsSection").appendChild(showSectionSubheaderShows);
-    // document.getElementById("showsSection").appendChild(showsSubtitleDiv);
     showSectionHeaderSubheader.appendChild(showsTitleDiv);
     showSectionSubheaderShows.appendChild(showsSubtitleDiv);
     showsSubtitleDiv.appendChild(showsSubtitlesDate);
@@ -252,7 +250,6 @@ const render = () => {
     showsSubtitleDiv.appendChild(showsSubtitlesLocation);
     
 
-    // document.getElementById("showsSection").appendChild(showSectionContainer);
     showSectionSubheaderShows.appendChild(showSectionContainer);
     showSectionContainer.appendChild(showSectionTitle);
     showSectionContainer.appendChild(showSectionSubheader);
@@ -263,7 +260,6 @@ const render = () => {
     showSectionContainer.appendChild(showSectionLocationName);
     showSectionContainer.appendChild(showSectionButton);
     
-    // document.getElementById("showsSection").appendChild(showsSectionContainerTwo);
     showSectionSubheaderShows.appendChild(showsSectionContainerTwo);
     showsSectionContainerTwo.appendChild(showsSectionSubheaderThree);
     showsSectionContainerTwo.appendChild(showSectionDateTwo);
@@ -273,7 +269,6 @@ const render = () => {
     showsSectionContainerTwo.appendChild(showsSectionLocationNameTwo);
     showsSectionContainerTwo.appendChild(showsSectionButtonTwo);
 
-    // document.getElementById("showsSection").appendChild(showsSectionContainerThree);
     showSectionSubheaderShows.appendChild(showsSectionContainerThree);
     showsSectionContainerThree.appendChild(showsSectionSubheaderFive);
     showsSectionContainerThree.appendChild(showSectionDateThree);
@@ -283,7 +278,6 @@ const render = () => {
     showsSectionContainerThree.appendChild(showsSectionLocationNameThree);
     showsSectionContainerThree.appendChild(showsSectionButtonThree);
 
-    // document.getElementById("showsSection").appendChild(showsSectionContainerFour);
     showSectionSubheaderShows.appendChild(showsSectionContainerFour);
     showsSectionContainerFour.appendChild(showsSectionSubheaderSeven);
     showsSectionContainerFour.appendChild(showSectionDateFour);
@@ -293,7 +287,6 @@ const render = () => {
     showsSectionContainerFour.appendChild(showsSectionLocationNameFour);
     showsSectionContainerFour.appendChild(showsSectionButtonFour);
 
-    // document.getElementById("showsSection").appendChild(showsSectionContainerFive);
     showSectionSubheaderShows.appendChild(showsSectionContainerFive);
     showsSectionContainerFive.appendChild(showsSectionSubheaderNine);
     showsSectionContainerFive.appendChild(showSectionDateFive);
@@ -303,7 +296,6 @@ const render = () => {
     showsSectionContainerFive.appendChild(showsSectionLocationNameFive);
     showsSectionContainerFive.appendChild(showsSectionButtonFive);
 
-    // document.getElementById("showsSection").appendChild(showsSectionContainerSix);
     showSectionSubheaderShows.appendChild(showsSectionContainerSix);
     showsSectionContainerSix.appendChild(showsSectionSubheaderEleven);
     showsSectionContainerSix.appendChild(showSectionDateSix);

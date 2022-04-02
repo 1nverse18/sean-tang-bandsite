@@ -30,14 +30,58 @@ let commentsArray = [
          let nameOfComment = document.createElement('div');
          let textOfComment = document.createElement('div');
          let dateOfComment = document.createElement('div');
+         let photoOfComment = document.createElement('img');
+         let imageDiv = document.createElement('div');
+         let nameDateCommentDiv = document.createElement('div');
+         let nameDateDiv = document.createElement('div');
+        
+         nameOfComment.innerText = commentName;
+         textOfComment.innerText = commentText;
+         dateOfComment.innerText = commentDate;
 
-         commentItem.appendChild(nameOfComment);
-         commentItem.appendChild(textOfComment);
-         commentItem.appendChild(dateOfComment);
-
+         commentItem.appendChild(imageDiv);
+         imageDiv.appendChild(photoOfComment);
+         commentItem.appendChild(nameDateCommentDiv);
+         nameDateCommentDiv.appendChild(nameDateDiv);
+         nameDateDiv.appendChild(nameOfComment);
+         nameDateDiv.appendChild(dateOfComment);
+         nameDateCommentDiv.appendChild(textOfComment);
          commentList.appendChild(commentItem);
-     };
-     render();
- };
+        
+         nameOfComment.classList.add('comment-section__name');
+         textOfComment.classList.add('comment-section__text');
+         dateOfComment.classList.add('comment-section__date');
+         photoOfComment.classList.add('comment-section__photo');
+         commentItem.classList.add('comment-section__list');
+         nameDateCommentDiv.classList.add('comment-section__content');
+         nameDateDiv.classList.add('comment-section__name-date');
+    };
+};
 
- render();
+let displayComment = () => {
+    let commentInput = document.getElementById('comment');
+    let nameInput = document.getElementById('name');
+    let dateInput = new Date();
+
+    let comment = commentInput.value;
+    commentInput.value = '';
+
+    let date = (dateInput.getMonth()+1)+'/'+(dateInput.getDate())+'/'+dateInput.getFullYear();
+
+    let name = nameInput.value;
+    nameInput.value = '';
+
+    const commentObject = {
+        name: name,
+        comment: comment,
+        timestamp: date
+    };
+    commentsArray.unshift(commentObject);
+    render();
+};
+
+render();
+
+let button = document.getElementById('submit-button');
+
+button.addEventListener('click', displayComment);

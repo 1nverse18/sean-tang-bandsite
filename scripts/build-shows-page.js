@@ -32,7 +32,7 @@ const showsArray = [
 ]
 
 const render = () => {
-    let showsSection = document.getElementById('showsSection');
+    // Titles and 1st Show
     let showsTitleDiv = document.createElement('div');
     let showsSubtitleDiv = document.createElement('div');
     let showsSubtitlesDate = document.createElement('p');
@@ -47,7 +47,10 @@ const render = () => {
     let showSectionVenueName = document.createElement('p');
     let showSectionLocation = document.createElement('p');
     let showSectionLocationName = document.createElement('p');
-    
+    let showSectionHeaderSubheader = document.createElement('div');
+    let showSectionSubheaderShows = document.createElement('div');
+
+    // 2nd Show
     let showsSectionContainerTwo = document.createElement('div');
     let showsSectionSubheaderThree = document.createElement('p');
     let showSectionDateTwo = document.createElement('p');
@@ -57,6 +60,7 @@ const render = () => {
     let showsSectionLocationNameTwo = document.createElement('p');
     let showsSectionButtonTwo = document.createElement('button');
 
+    // 3rd Show
     let showsSectionContainerThree = document.createElement('div');
     let showsSectionSubheaderFive = document.createElement('p');
     let showSectionDateThree = document.createElement('p');
@@ -66,6 +70,7 @@ const render = () => {
     let showsSectionLocationNameThree = document.createElement('p');
     let showsSectionButtonThree = document.createElement('button');
 
+    // 4th Show
     let showsSectionContainerFour = document.createElement('div');
     let showsSectionSubheaderSeven = document.createElement('p');
     let showSectionDateFour = document.createElement('p');
@@ -75,6 +80,7 @@ const render = () => {
     let showsSectionLocationNameFour = document.createElement('p');
     let showsSectionButtonFour = document.createElement('button');
     
+    // 5th Show
     let showsSectionContainerFive = document.createElement('div');
     let showsSectionSubheaderNine = document.createElement('p');
     let showSectionDateFive = document.createElement('p');
@@ -84,6 +90,7 @@ const render = () => {
     let showsSectionLocationNameFive = document.createElement('p');
     let showsSectionButtonFive = document.createElement('button');
 
+    // 6th Show
     let showsSectionContainerSix = document.createElement('div');
     let showsSectionSubheaderEleven = document.createElement('p');
     let showSectionDateSix = document.createElement('p');
@@ -93,6 +100,10 @@ const render = () => {
     let showsSectionLocationNameSix = document.createElement('p');
     let showsSectionButtonSix = document.createElement('button');
 
+    // 1st Show Classes
+    document.getElementById('showsSection').classList.add('show-section__wrapper');
+    showSectionHeaderSubheader.classList.add('show-section__header');
+    showSectionSubheaderShows.classList.add('show-section__subheader-shows')
     showsSubtitleDiv.classList.add('show-section__tablet-subtitles');
     showsTitleDiv.classList.add('show-section__tablet-title');
     showsSubtitlesDate.classList.add('show-section__tablet-subtitle');
@@ -109,6 +120,8 @@ const render = () => {
     showSectionLocationName.classList.add('show-section__text');
     showSectionLocationName.classList.add('show-section__location--one');
     showSectionButton.classList.add('show-section__button');
+
+    // 2nd Show Classes
     showsSectionContainerTwo.classList.add('show-section__container');
     showsSectionSubheaderThree.classList.add('show-section__sub-header');
     showSectionDateTwo.classList.add('show-section__date');
@@ -120,6 +133,7 @@ const render = () => {
     showsSectionLocationNameTwo.classList.add('show-section__location--two');
     showsSectionButtonTwo.classList.add('show-section__button');
 
+    // 3rd Show Classes
     showsSectionContainerThree.classList.add('show-section__container');
     showsSectionSubheaderFive.classList.add('show-section__sub-header');
     showSectionDateThree.classList.add('show-section__date');
@@ -131,6 +145,7 @@ const render = () => {
     showsSectionLocationNameThree.classList.add('show-section__location--three');
     showsSectionButtonThree.classList.add('show-section__button');
 
+    // 4th Show Classes
     showsSectionContainerFour.classList.add('show-section__container');
     showsSectionSubheaderSeven.classList.add('show-section__sub-header');
     showSectionDateFour.classList.add('show-section__date');
@@ -142,6 +157,7 @@ const render = () => {
     showsSectionLocationNameFour.classList.add('show-section__location--four');
     showsSectionButtonFour.classList.add('show-section__button');
 
+    // 5th Show Classes
     showsSectionContainerFive.classList.add('show-section__container');
     showsSectionSubheaderNine.classList.add('show-section__sub-header');
     showSectionDateFive.classList.add('show-section__date');
@@ -153,6 +169,7 @@ const render = () => {
     showsSectionLocationNameFive.classList.add('show-section__location--five');
     showsSectionButtonFive.classList.add('show-section__button');
 
+    // 6th Show Classes
     showsSectionContainerSix.classList.add('show-section__container');
     showsSectionSubheaderEleven.classList.add('show-section__sub-header');
     showSectionDateSix.classList.add('show-section__date');
@@ -164,6 +181,7 @@ const render = () => {
     showsSectionLocationNameSix.classList.add('show-section__location--six');
     showsSectionButtonSix.classList.add('show-section__button');
 
+    // 1st Text
     showsTitleDiv.innerHTML = 'Shows';
     showsSubtitlesDate.innerHTML = 'DATE';
     showsSubtitlesVenue.innerHTML = 'VENUE';
@@ -177,6 +195,8 @@ const render = () => {
     showSectionLocationName.innerHTML = showsArray[0].Location;
     showSectionButton.innerHTML = 'BUY TICKETS';
     
+
+    // 2nd Text
     showsSectionSubheaderThree.innerHTML ='Date';
     showSectionDateTwo.innerHTML = showsArray[1].Date;
     showsSectionSubheaderFour.innerHTML = 'Venue';
@@ -185,6 +205,7 @@ const render = () => {
     showsSectionLocationNameTwo.innerHTML = showsArray[1].Location;
     showsSectionButtonTwo.innerHTML = 'BUY TICKETS';
 
+    // 3rd Text
     showsSectionSubheaderFive.innerHTML ='Date';
     showSectionDateThree.innerHTML = showsArray[2].Date;
     showsSectionSubheaderSix.innerHTML = 'Venue';
@@ -193,6 +214,7 @@ const render = () => {
     showsSectionLocationNameThree.innerHTML = showsArray[2].Location;
     showsSectionButtonThree.innerHTML = 'BUY TICKETS';
 
+    // 4th Text
     showsSectionSubheaderSeven.innerHTML ='Date';
     showSectionDateFour.innerHTML = showsArray[3].Date;
     showsSectionSubheaderEight.innerHTML = 'Venue';
@@ -201,6 +223,7 @@ const render = () => {
     showsSectionLocationNameFour.innerHTML = showsArray[3].Location;
     showsSectionButtonFour.innerHTML = 'BUY TICKETS';
 
+    // 5th Text
     showsSectionSubheaderNine.innerHTML ='Date';
     showSectionDateFive.innerHTML = showsArray[4].Date;
     showsSectionSubheaderTen.innerHTML = 'Venue';
@@ -209,6 +232,7 @@ const render = () => {
     showsSectionLocationNameFive.innerHTML = showsArray[4].Location;
     showsSectionButtonFive.innerHTML = 'BUY TICKETS';
 
+    // 6th Text
     showsSectionSubheaderEleven.innerHTML ='Date';
     showSectionDateSix.innerHTML = showsArray[5].Date;
     showsSectionSubheaderEleven.innerHTML = 'Venue';
@@ -217,13 +241,19 @@ const render = () => {
     showsSectionLocationNameSix.innerHTML = showsArray[5].Location;
     showsSectionButtonSix.innerHTML = 'BUY TICKETS';
 
-
-    document.getElementById("showsSection").appendChild(showsTitleDiv);
-    document.getElementById("showsSection").appendChild(showsSubtitleDiv);
+    document.getElementById("showsSection").appendChild(showSectionHeaderSubheader);
+    // document.getElementById("showsSection").appendChild(showsTitleDiv);
+    document.getElementById("showsSection").appendChild(showSectionSubheaderShows);
+    // document.getElementById("showsSection").appendChild(showsSubtitleDiv);
+    showSectionHeaderSubheader.appendChild(showsTitleDiv);
+    showSectionSubheaderShows.appendChild(showsSubtitleDiv);
     showsSubtitleDiv.appendChild(showsSubtitlesDate);
     showsSubtitleDiv.appendChild(showsSubtitlesVenue);
     showsSubtitleDiv.appendChild(showsSubtitlesLocation);
-    document.getElementById("showsSection").appendChild(showSectionContainer);
+    
+
+    // document.getElementById("showsSection").appendChild(showSectionContainer);
+    showSectionSubheaderShows.appendChild(showSectionContainer);
     showSectionContainer.appendChild(showSectionTitle);
     showSectionContainer.appendChild(showSectionSubheader);
     showSectionContainer.appendChild(showSectionDate);
@@ -233,7 +263,8 @@ const render = () => {
     showSectionContainer.appendChild(showSectionLocationName);
     showSectionContainer.appendChild(showSectionButton);
     
-    document.getElementById("showsSection").appendChild(showsSectionContainerTwo);
+    // document.getElementById("showsSection").appendChild(showsSectionContainerTwo);
+    showSectionSubheaderShows.appendChild(showsSectionContainerTwo);
     showsSectionContainerTwo.appendChild(showsSectionSubheaderThree);
     showsSectionContainerTwo.appendChild(showSectionDateTwo);
     showsSectionContainerTwo.appendChild(showsSectionSubheaderFour);
@@ -242,7 +273,8 @@ const render = () => {
     showsSectionContainerTwo.appendChild(showsSectionLocationNameTwo);
     showsSectionContainerTwo.appendChild(showsSectionButtonTwo);
 
-    document.getElementById("showsSection").appendChild(showsSectionContainerThree);
+    // document.getElementById("showsSection").appendChild(showsSectionContainerThree);
+    showSectionSubheaderShows.appendChild(showsSectionContainerThree);
     showsSectionContainerThree.appendChild(showsSectionSubheaderFive);
     showsSectionContainerThree.appendChild(showSectionDateThree);
     showsSectionContainerThree.appendChild(showsSectionSubheaderSix);
@@ -251,7 +283,8 @@ const render = () => {
     showsSectionContainerThree.appendChild(showsSectionLocationNameThree);
     showsSectionContainerThree.appendChild(showsSectionButtonThree);
 
-    document.getElementById("showsSection").appendChild(showsSectionContainerFour);
+    // document.getElementById("showsSection").appendChild(showsSectionContainerFour);
+    showSectionSubheaderShows.appendChild(showsSectionContainerFour);
     showsSectionContainerFour.appendChild(showsSectionSubheaderSeven);
     showsSectionContainerFour.appendChild(showSectionDateFour);
     showsSectionContainerFour.appendChild(showsSectionSubheaderEight);
@@ -260,7 +293,8 @@ const render = () => {
     showsSectionContainerFour.appendChild(showsSectionLocationNameFour);
     showsSectionContainerFour.appendChild(showsSectionButtonFour);
 
-    document.getElementById("showsSection").appendChild(showsSectionContainerFive);
+    // document.getElementById("showsSection").appendChild(showsSectionContainerFive);
+    showSectionSubheaderShows.appendChild(showsSectionContainerFive);
     showsSectionContainerFive.appendChild(showsSectionSubheaderNine);
     showsSectionContainerFive.appendChild(showSectionDateFive);
     showsSectionContainerFive.appendChild(showsSectionSubheaderTen);
@@ -269,7 +303,8 @@ const render = () => {
     showsSectionContainerFive.appendChild(showsSectionLocationNameFive);
     showsSectionContainerFive.appendChild(showsSectionButtonFive);
 
-    document.getElementById("showsSection").appendChild(showsSectionContainerSix);
+    // document.getElementById("showsSection").appendChild(showsSectionContainerSix);
+    showSectionSubheaderShows.appendChild(showsSectionContainerSix);
     showsSectionContainerSix.appendChild(showsSectionSubheaderEleven);
     showsSectionContainerSix.appendChild(showSectionDateSix);
     showsSectionContainerSix.appendChild(showsSectionSubheaderTwelve);

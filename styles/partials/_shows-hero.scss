@@ -72,4 +72,25 @@
             padding-left: 1rem;
         }
     }
+
+    @include desktop {
+        height: 50rem;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        
+        &__title {
+            padding-top: 15rem;
+
+            &--large{
+                width: 30rem;
+            }
+        }
+
+        &__player {
+        position: absolute;
+        top: 22rem;
+        right: 5rem;
+        }
+    }
 }

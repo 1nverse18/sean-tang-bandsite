@@ -52,6 +52,13 @@
             justify-content: flex-start;
             padding-left: 2rem;
             padding-right: 2rem;
+
+            &:hover{
+                background-color: #FAFAFA;
+            }
+            &:active{
+                background-color: #E1E1E1;
+            }
         }
 
         &__date{
@@ -134,5 +141,25 @@
             padding-left: 1.2rem;
             padding-right: 1.2rem;
         }
+    }
+
+    @include desktop {
+        &__wrapper{
+            display: flex;
+            justify-content: center;
+        }
+
+        &__header{
+            padding-right: 4rem;
+            margin-right: 5rem;
+        }
+
+        &__subheader-shows{
+            padding-top: 4rem;
+        }
+    }
+
+        &__tablet-title {
+        font-size: 3rem;
     }
 }

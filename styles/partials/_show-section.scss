@@ -1,7 +1,16 @@
 @use '../partials/variables';
 @use '../partials/mixins' as *;
 
+.active {
+    background-color: #E1E1E1;
+
+    &:hover{
+        background-color: #E1E1E1;
+    }
+}
+
 .show-section{
+
     &__tablet-title{
         display: none;
     }
@@ -46,6 +55,7 @@
         margin-top: 0.5rem;
     }
     @include tablet {
+        
         &__container {
             flex-direction: row;
             align-items: center;
@@ -56,9 +66,7 @@
             &:hover{
                 background-color: #FAFAFA;
             }
-            &:active{
-                background-color: #E1E1E1;
-            }
+            
         }
 
         &__date{

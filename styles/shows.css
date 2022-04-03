@@ -208,7 +208,7 @@ h3 {
 .hero-image {
   position: relative;
   display: flex;
-  background-image: url(../../assets/images/hero-shows.jpg);
+  background-image: url(../assets/images/hero-shows.jpg);
   background-position: center;
   background-size: cover;
   height: 18rem;
@@ -290,6 +290,13 @@ h3 {
   }
 }
 
+.active {
+  background-color: #E1E1E1;
+}
+.active:hover {
+  background-color: #E1E1E1;
+}
+
 .show-section__tablet-title {
   display: none;
 }
@@ -340,9 +347,6 @@ h3 {
   }
   .show-section__container:hover {
     background-color: #FAFAFA;
-  }
-  .show-section__container:active {
-    background-color: #E1E1E1;
   }
   .show-section__date--one {
     padding-right: 3.8rem;

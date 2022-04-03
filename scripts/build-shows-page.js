@@ -304,6 +304,25 @@ const render = () => {
     showsSectionContainerSix.appendChild(showsSectionLocationSix);
     showsSectionContainerSix.appendChild(showsSectionLocationNameSix);
     showsSectionContainerSix.appendChild(showsSectionButtonSix);
-}
 
+    // Active state for shows - Works when inspector isn't open.
+    var sectionContainer = document.querySelector('.show-section__subheader-shows');
+    console.log(sectionContainer);
+    var container = sectionContainer.querySelectorAll('.show-section__container');
+    console.log(container);
+    for (var i = 0; i < container.length; i++) {
+        container[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        if (current.length > 0) { 
+          current[0].className = current[0].className.replace(" active", "");
+        }
+        console.log(current);
+        this.className += " active";
+        });
+      }
+}
 render();
+
+
+
+

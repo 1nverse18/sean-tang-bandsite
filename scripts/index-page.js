@@ -21,10 +21,15 @@ let commentsArray = [
      list.innerHTML = '';
 
      for (let i = 0; i < commentsArray.length; i++) {
-         let comments = commentsArray[i];
-         let commentName = comments.name;
-         let commentText = comments.comment;
-         let commentDate = comments.timestamp;
+          commentList.appendChild(displayComment(commentsArray[i]));
+    };
+   
+};
+
+const displayComment = (comment) => {
+    let commentName = comment.name;
+         let commentText = comment.comment;
+         let commentDate = comment.timestamp;
 
          let commentItem = document.createElement('li');
          let nameOfComment = document.createElement('div');
@@ -46,7 +51,6 @@ let commentsArray = [
          nameDateDiv.appendChild(nameOfComment);
          nameDateDiv.appendChild(dateOfComment);
          nameDateCommentDiv.appendChild(textOfComment);
-         commentList.appendChild(commentItem);
         
          nameOfComment.classList.add('comment-section__name');
          textOfComment.classList.add('comment-section__text');
@@ -55,10 +59,9 @@ let commentsArray = [
          commentItem.classList.add('comment-section__list');
          nameDateCommentDiv.classList.add('comment-section__content');
          nameDateDiv.classList.add('comment-section__name-date');
-    };
-};
-
-let displayComment = () => {
+         return commentItem;
+}
+let submitComment = () => {
     let commentInput = document.getElementById('comment');
     let nameInput = document.getElementById('name');
     let dateInput = new Date();
@@ -66,15 +69,15 @@ let displayComment = () => {
     let comment = commentInput.value;
     commentInput.value = '';
 
-    let date = (dateInput.getMonth()+1)+'/'+(dateInput.getDate())+'/'+dateInput.getFullYear();
+    let date = '0'+(+dateInput.getMonth()+1)+'/'+('0'+ dateInput.getDate())+'/'+dateInput.getFullYear();
 
     let name = nameInput.value;
     nameInput.value = '';
 
     const commentObject = {
         name: name,
+        timestamp: date,
         comment: comment,
-        timestamp: date
     };
     commentsArray.unshift(commentObject);
     render();
@@ -84,4 +87,5 @@ render();
 
 let button = document.getElementById('submit-button');
 
-button.addEventListener('click', displayComment);
+button.addEventListener('click', submitComment);
+

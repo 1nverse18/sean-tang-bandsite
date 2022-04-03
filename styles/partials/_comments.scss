@@ -2,13 +2,82 @@
 @use '../partials/mixins' as *;
 
 .comment-section {
+
+    &__header {
+        font-family: 'AvenirNext LT Pro Demi';
+        font-size: 1.5rem;
+        padding-top: 1rem;
+        margin-left: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__label{
+        color: #AFAFAF;
+        font-size: 0.8rem;
+        padding-bottom: 4px;
+    }
+
+    #name {
+        height: 2.25rem;
+        border: #AFAFAF solid 1px;
+        width: 90%;
+        padding-left: 0.5rem;
+        color: black;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        border-radius: 4px;
+        background-color: #FAFAFA;
+    }
+
+    ::placeholder {
+        color: black;
+        position: absolute;
+        top: 0.5rem;
+    }
+
+    #comment {
+        border: #AFAFAF solid 1px;
+        height: 6.75rem;
+        width: 14rem;
+        padding-left: 0.5rem;
+        color: black;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        border-radius: 4px;
+        position: relative;
+        background-color: #FAFAFA;
+    }
+
+    #submit-button {
+        background-color: black;
+        color: white;
+        font-family: 'AvenirNext LT Pro Demi';
+        font-size: 1rem;
+        border-radius: 5px;
+        height: 2.5rem;
+        width: 14.6rem;
+        margin-left: 4.5rem;
+        padding-top: 0.3rem;
+    }
+
+    &__mohan {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        object-position: center;
+        object-fit: cover;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 1.1rem;
+    }
+
     &__list{
         display: flex;
         font-size: 0.9rem;
         border-bottom: solid 1px #AFAFAF;
         padding-top: 0.8rem;
         padding-bottom: 0.8rem;
-        // justify-content: center;
+        justify-content: center;
     }
 
     #list {
@@ -26,20 +95,87 @@
 
     &__content{
         padding-left: 1rem;
-        
+        width: 100%;
     }
 
     &__name-date {
         display: flex;
         justify-content: space-between;
+       
     }
 
     &__name {
         font-family: 'AvenirNext LT Pro Demi';
         padding-bottom: 0.3rem;
+        display: flex;
     }
 
     &__date {
         color: #AFAFAF;
     }
+
+    &__text {
+        width: 248px;
+        height: auto;
+        word-wrap: break-word;
+    }
+
+    @include tablet {
+        &__header {
+        padding-top: 2rem;
+        font-size: 2.5rem;
+    }
+
+    &__input {
+        padding-left: 4rem;
+    }
+
+    #name {
+        width: 35rem;
+    }
+
+    #comment {
+        width: 35rem;
+    }
+
+    #submit-button {
+        margin-left: 30.2rem;
+        width: 10rem;
+    }
+
+    #list {
+        padding-left: 6rem;
+    }
+
+    &__text {
+        width: 600px;
+        height: auto;
+        word-wrap: break-word;
+    }
+
+    &__name-date {
+        width: 600px;
+    }
+
+    &__list {
+        border-bottom: solid 1px #AFAFAF;
+        width: 600px;
+        margin-bottom: 1rem;
+    }
+  }
+
+  @include desktop {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      #list {
+          padding-right: 20rem;
+      }
+
+      &__header {
+          padding-right: 45rem;
+      }
+  }
 }

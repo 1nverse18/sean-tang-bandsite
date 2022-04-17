@@ -297,145 +297,133 @@ h3 {
   background-color: #E1E1E1;
 }
 
-.show-section__tablet-title {
+.shows-section__header-container {
   display: none;
 }
-.show-section__tablet-subtitles {
-  display: none;
-}
-.show-section__container {
+.shows-section__container {
   padding: 2rem 1rem 1rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
   border-bottom: solid 1px #AFAFAF;
 }
-.show-section__container--final {
-  margin-bottom: 1.5rem;
+.shows-section__date {
+  font-family: "AvenirNext LT Pro Bold";
 }
-.show-section__date {
-  font-weight: bold;
+.shows-section__text {
+  font-size: 1.2rem;
 }
-.show-section__text {
-  font-size: 1rem;
-}
-.show-section__title {
+.shows-section__title {
   font-family: "AvenirNext LT Pro Demi";
-  font-size: 1.5rem;
-  padding-bottom: 1.8rem;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-top: 2rem;
 }
-.show-section__sub-header {
+.shows-section__sub-header {
   color: #AFAFAF;
+  font-size: 1rem;
   font-family: "AvenirNext LT Pro Demi";
 }
-.show-section__button {
+.shows-section__button {
   background-color: #323232;
   color: white;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   font-size: 1rem;
   font-weight: bold;
   height: 2.5rem;
+  width: 90%;
   border-radius: 5px;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .show-section__container {
+  .shows-section__container {
+    display: flex;
+    width: 900px;
+  }
+  .shows-section__header-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #AFAFAF;
+    margin: 0 1rem 0 1rem;
+    width: 900px;
+  }
+  .shows-section__header-container--date {
+    width: 8.375rem;
+    margin-left: 1rem;
+    align-self: center;
+  }
+  .shows-section__header-container--venue {
+    width: 8.375rem;
+    margin: 0;
+    align-self: center;
+  }
+  .shows-section__header-container--location {
+    width: 8.375rem;
+    margin-right: 5rem;
+    align-self: center;
+  }
+  .shows-section__header-container--button-header {
+    visibility: hidden;
+    font-size: 0.8125rem;
+    width: 160px;
+    height: 48px;
+    color: white;
+    background-color: black;
+    border-radius: 0.3125rem;
+    border: none;
+  }
+  .shows-section__date {
+    width: 8.375rem;
+    margin: 0;
+  }
+  .shows-section__venue {
+    width: 8.375rem;
+    margin: 0;
+  }
+  .shows-section__container {
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
-  .show-section__container:hover {
+  .shows-section__container:hover {
     background-color: #FAFAFA;
   }
-  .show-section__date--one {
-    padding-right: 3.8rem;
+  .shows-section__sub-header {
+    display: none;
   }
-  .show-section__date--two {
-    padding-right: 3.7rem;
+  .shows-section__title {
+    display: flex;
+    font-size: 3rem;
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
   }
-  .show-section__date--three {
-    padding-right: 4.8rem;
-  }
-  .show-section__date--four {
-    padding-right: 4.2rem;
-  }
-  .show-section__date--five {
-    padding-right: 4.4rem;
-  }
-  .show-section__date--six {
-    padding-right: 3.4rem;
-  }
-  .show-section__location--one {
-    padding-left: 4rem;
-    padding-right: 3rem;
-  }
-  .show-section__location--two {
-    padding-left: 5.1rem;
-    padding-right: 3rem;
-  }
-  .show-section__location--three {
-    padding-left: 4.1rem;
-    padding-right: 3rem;
-  }
-  .show-section__location--four {
-    padding-left: 4rem;
-    padding-right: 3rem;
-  }
-  .show-section__location--five {
+  .shows-section__button {
     padding-left: 3rem;
     padding-right: 3rem;
-  }
-  .show-section__location--six {
-    padding-left: 5.3rem;
-    padding-right: 3rem;
-  }
-  .show-section__tablet-title {
-    font-family: "AvenirNext LT Pro Demi";
-    font-size: 2rem;
-    padding-bottom: 1.8rem;
-    padding-top: 3rem;
-    padding-left: 2rem;
-    display: flex;
-  }
-  .show-section__tablet-subtitles {
-    display: flex;
-    color: #AFAFAF;
-    font-family: "AvenirNext LT Pro Demi";
-    padding-left: 2rem;
-  }
-  .show-section__tablet-subtitle {
-    padding-right: 165px;
-  }
-  .show-section__tablet-subtitle--venue {
-    padding-right: 110px;
-  }
-  .show-section__sub-header {
-    display: none;
-  }
-  .show-section__title {
-    display: none;
-  }
-  .show-section__button {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1280px) {
-  .show-section__wrapper {
+  .shows-section {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
   }
-  .show-section__header {
-    padding-right: 4rem;
+  .shows-section__header-container {
+    padding-top: 3rem;
+  }
+  .shows-section__container-all {
+    width: 100%;
+    margin-left: 10rem;
     margin-right: 5rem;
   }
-  .show-section__subheader-shows {
-    padding-top: 4rem;
+  .shows-section__title-container {
+    margin-left: 5rem;
   }
-}
-.show-section__tablet-title {
-  font-size: 3rem;
 }
 
 * {

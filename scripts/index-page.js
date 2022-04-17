@@ -16,18 +16,17 @@ let commentsArray = [
     }
 ]
 
- let render = () => {
+ let render = (array) => {
      let commentList = document.getElementById('list');
      list.innerHTML = '';
 
-     for (let i = 0; i < commentsArray.length; i++) {
-          commentList.appendChild(displayComment(commentsArray[i]));
+     for (let i = 0; i < array.length; i++) {
+          commentList.appendChild(displayComment(array[i]));
     };
-   
 };
 
 const displayComment = (comment) => {
-    let commentName = comment.name;
+         let commentName = comment.name;
          let commentText = comment.comment;
          let commentDate = comment.timestamp;
 
@@ -61,7 +60,8 @@ const displayComment = (comment) => {
          nameDateDiv.classList.add('comment-section__name-date');
          return commentItem;
 }
-let submitComment = () => {
+let submitComment = (e) => {
+    e.preventDefault();
     let commentInput = document.getElementById('comment');
     let nameInput = document.getElementById('name');
     let dateInput = new Date();
@@ -83,9 +83,30 @@ let submitComment = () => {
     render();
 };
 
-render();
+render(commentsArray);
 
 let button = document.getElementById('submit-button');
+let form = document.getElementById('commentSection');
+form.addEventListener('submit', submitComment = (e) => {
+    e.preventDefault();
+    let commentInput = e.target.comment.value;
+    let nameInput = e.target.name.value;
+    let dateInput = new Date();
 
-button.addEventListener('click', submitComment);
+    let comment = commentInput;
+    commentInput.value = '';
+
+    let date = '0'+(+dateInput.getMonth()+1)+'/'+('0'+ dateInput.getDate())+'/'+dateInput.getFullYear();
+
+    let name = nameInput;
+    nameInput.value = '';
+
+    const commentObject = {
+        name: name,
+        timestamp: date,
+        comment: comment,
+    };
+    commentsArray.unshift(commentObject);
+    render(commentsArray);
+});
 

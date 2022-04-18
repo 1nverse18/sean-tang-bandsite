@@ -358,11 +358,12 @@ h3 {
   .shows-section__header-container--venue {
     width: 8.375rem;
     margin: 0;
+    margin-left: 3rem;
     align-self: center;
   }
   .shows-section__header-container--location {
     width: 8.375rem;
-    margin-right: 5rem;
+    margin-right: 3.8rem;
     align-self: center;
   }
   .shows-section__header-container--button-header {
@@ -376,7 +377,7 @@ h3 {
     border: none;
   }
   .shows-section__date {
-    width: 8.375rem;
+    width: 11rem;
     margin: 0;
   }
   .shows-section__venue {

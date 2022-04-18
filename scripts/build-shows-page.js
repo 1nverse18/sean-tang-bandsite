@@ -1,36 +1,3 @@
-const showsArray = [
-    {
-    Date : "Mon Sept 06 2021",
-    Venue : "Ronald Lane",
-    Location: "San Francisco, CA"
-    },
-    {
-    Date : "Tues Sept 21 2021",
-    Venue : "Pier 3 East",
-    Location: "San Francisco, CA"
-    },
-    {
-    Date : "Fri Oct 15 2021",
-    Venue : "View Lounge",
-    Location: "San Francisco, CA"
-    },
-    {
-    Date : "Sat Nov 06 2021",
-    Venue : "Hyatt Agency",
-    Location: "San Francisco, CA"
-    },
-    {
-    Date : "Fri Nov 26 2021",
-    Venue : "Moscow Center",
-    Location: "San Francisco, CA"
-    },
-    {
-    Date : "Wed Dec 15 2021",
-    Venue : "Press Club",
-    Location: "San Francisco, CA"
-    }
-]
-
 let showsTable = (array) =>  {
   let mainContainer = document.querySelector(".shows-section");
   let showsTitleContainer = document.createElement("div");
@@ -84,7 +51,9 @@ let showsTable = (array) =>  {
     date.classList.add("shows-section__text");
     date.classList.add("shows-section__date");
     showsMainContainer.appendChild(date);
-    date.innerText = array[i]["date"];
+    let actualDate = array[i]["date"];
+    let finalDate = parseInt(actualDate);
+    date.innerText = new Date(finalDate).toDateString();
 
     let venueHeader = document.createElement("h3");
     venueHeader.classList.add("shows-section__sub-header");
@@ -118,9 +87,7 @@ let showsTable = (array) =>  {
     button.innerText = "BUY TICKETS";
   }
   let sectionContainer = document.querySelector(".shows-section__container-all");
-  console.log(sectionContainer);
   let container = sectionContainer.querySelectorAll('.shows-section__container');
-  console.log(container);
   for (let i = 0; i < container.length; i++) {
       container[i].addEventListener("click", function() {
       let current = document.getElementsByClassName("active");
@@ -131,19 +98,16 @@ let showsTable = (array) =>  {
       });
     }
 }
+const apiKey = "99b6d529-90e7-4d9d-b9b9-ecf971cc9b45";
 
 let showsData = axios.get(
-  "https://project-1-api.herokuapp.com/showdates?api_key=philipb"
+  "https://project-1-api.herokuapp.com/showdates?api_key=99b6d529-90e7-4d9d-b9b9-ecf971cc9b45"
 );
-showsData.then(response => {
-  showsTable(response.data);
-  console.log(response.data);
+showsData.then(run => {
+  showsTable(run.data);
+  console.log(run.data);
 });
 showsData.catch(error => {
-  console.log("you did something wrong");
+  console.log("error!!");
 });
-
-
-
-
 

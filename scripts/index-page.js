@@ -53,7 +53,7 @@ commentForm.addEventListener("submit", function(e) {
     );
 
     newComment.then((result) => {
-        getComments();
+        grabComments();
         console.log(result.data);
     });
 
@@ -62,7 +62,7 @@ commentForm.addEventListener("submit", function(e) {
 });
 
 
-function getComments() {
+function grabComments() {
     axios.get(
         "https://project-1-api.herokuapp.com/comments?api_key=7213a6eb-4792-4e66-9030-900c82893a39"
       )
@@ -74,4 +74,4 @@ function getComments() {
     });
 };
 
-getComments();
+grabComments();
